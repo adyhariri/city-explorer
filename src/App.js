@@ -44,8 +44,8 @@ class App extends React.Component{
         <p>city name :{this.state.locationData.display_name}</p>
         <p>latitude :{this.state.locationData.lat}</p>
         <p>longitude:{this.state.locationData.lon}</p>
-        { this.state.displayErrMes&&this.state.errorMessage}
         {this.state.displayImg&&<img src={`https://maps.locationiq.com/v3/staticmap?key=pk.005b36a82b2d0a1ca8e0cba89b50a48d&center=${this.state.locationData.lat},${this.state.locationData.lon}`}alt='map'/>}
+        { this.state.displayErrMes&&this.state.errorMessage}
       </div>
     )
   }
