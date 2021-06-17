@@ -18,3 +18,19 @@ this app will allow clients to search about location of the city and it will sho
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+
+# City Explorer
+
+**Author**: mahmoud almahmoud
+**Version**: 3.0.0 
+
+## Overview
+will allow user to get weather and movies info depends on searchquery
+## Getting Started
+enter valid city or country name then press explre!
+## Architecture
+js , react.js , axios , node,js, .env ,express and cors
+## Change Log
+17-6-2021 6:00pm - Application now has a fully-functional express server, with a GET route for the location resource. 
+
