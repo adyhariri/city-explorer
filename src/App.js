@@ -1,7 +1,8 @@
 'use strict';
 import React from 'react';
 import axios from 'axios';
-import Weather from './weather';
+import Weather from './Weather';
+import Movie from './Movie';
 
 class App extends React.Component {
   constructor(props) {
@@ -99,23 +100,10 @@ class App extends React.Component {
         <p>longitude:{this.state.locationData.lon}</p>
         {this.state.displayImg && <img src={`https://maps.locationiq.com/v3/staticmap?key=pk.005b36a82b2d0a1ca8e0cba89b50a48d&center=${this.state.locationData.lat},${this.state.locationData.lon}`} alt='map' />}
         {/* { this.state.displayErrMes&&this.state.errorMessage} */}
-        {this.state.displayWeather && this.state.cData.map((item) => (
-
-          <Weather des={item.des} date={item.date} />
-
-        ))}
-        {console.log(this.state.movieData)}
-        {this.state.displayMovie && this.state.movieData.map((item) => (
-          <>
-            <p>{item.title}</p>
-            <p>{item.overview}</p>
-            <p>{item.average_votes}</p>
-            <p>{item.total_votes}</p>
-            <img src={item.image_url} alt='' />
-            <p>{item.popularity}</p>
-            <p>{item.released_on}</p>
-          </>
-        ))}
+        {this.state.displayWeather && 
+       <Weather data={this.state.cData}/>}
+        {this.state.displayMovie && 
+        <Movie data={this.state.movieData}/>}
       </div>
     )
   }

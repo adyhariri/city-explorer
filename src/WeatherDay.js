@@ -1,8 +1,8 @@
-'use strict';
+
 import React from 'react';
 
 
-class weather extends React.Component {
+class WeatherDay extends React.Component {
     render() {
         return (
             <>
@@ -13,4 +13,4 @@ class weather extends React.Component {
         )
     }
 }
-export default weather;
+export default WeatherDay;
